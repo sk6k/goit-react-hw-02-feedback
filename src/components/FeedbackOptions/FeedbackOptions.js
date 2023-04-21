@@ -6,7 +6,7 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => {
     <>
       {options.map(option => (
         <button
-          key={shortid.generate()}
+          key={option}
           type="button"
           onClick={onLeaveFeedback}
           name={option}
@@ -21,6 +21,6 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.array.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
