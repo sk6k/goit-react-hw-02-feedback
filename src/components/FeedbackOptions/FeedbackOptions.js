@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
 
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
